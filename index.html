@@ -20,13 +20,13 @@
         
           <h2>&iquest;Qu&eacute; te antoja?</h2>
           <form method="post" action="#">
-            <p><input type="radio" name="Mexican" value="mexican"> Mexican</p> 
+            <p><input type="radio" name="Mexican" value="mexican" onClick="goToMex();"> Mexican</p> 
             <p><input type="radio" name="Italian" value="italian"> Italian</p>
             <p><input type="radio" name="Thai" value="thai"> Thai </p> 
             <p><input type="radio" name="Brunch" value="brunch"> Brunch </p>
           </form>
             
-            
+          <p class="credit">Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a></p>
     
     
    
@@ -35,8 +35,20 @@
     
     <script>
       
-      var mymap = L.map('map').setView([51.505, -0.09], 13);
+      var mymap = L.map('map').setView([47.61542, -122.32412], 10);
+      L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v8/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZW1pbGlldmlyZ2luaWEiLCJhIjoiY2ludHB4NTRtMTFkM3UybTN2eDlyMWhzYSJ9.3HH65Px27rxsHMh7_kbWKg', {
+        maxZoom: 18,
+        accessToken: 'pk.eyJ1IjoiZW1pbGlldmlyZ2luaWEiLCJhIjoiY2ludHB4NTRtMTFkM3UybTN2eDlyMWhzYSJ9.3HH65Px27rxsHMh7_kbWKg'
+      }).addTo(mymap);
 
+      function goToMex() {
+        var mymap = L.map('map').setView([47.61542, -122.32412], 18);
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v8/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZW1pbGlldmlyZ2luaWEiLCJhIjoiY2ludHB4NTRtMTFkM3UybTN2eDlyMWhzYSJ9.3HH65Px27rxsHMh7_kbWKg', {
+        maxZoom: 18,
+        accessToken: 'pk.eyJ1IjoiZW1pbGlldmlyZ2luaWEiLCJhIjoiY2ludHB4NTRtMTFkM3UybTN2eDlyMWhzYSJ9.3HH65Px27rxsHMh7_kbWKg'
+      }).addTo(mymap);
+        }
+      
     </script>
   </body>
 </html> 

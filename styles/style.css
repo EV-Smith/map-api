@@ -23,6 +23,10 @@ h2
     font-weight: 300;
   }
 
+a {
+ text-decoration: none;
+  color: #0078a8;
+}
 input[type=submit] {
     padding:.5rem 1rem;
     margin: .5rem 1rem .5rem 0;
@@ -77,9 +81,12 @@ input[type=radio] {
 
 
 #map {
-  height: 12rem; 
+  height: 18rem; 
+  width: 28rem;
 }
 
-.results {
- padding-right: 4rem; 
+.credit {
+ padding-top: 5rem;
+  font-weight: 300;
+  font-size: .8rem;
 }
